@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "standard flow",
+    "minGpm": 17,
+    "maxGpm": 25
+  },
+  {
+    "id": 1,
+    "name": "high flow",
+    "minGpm": 30,
+    "maxGpm": 45
+  }
+]

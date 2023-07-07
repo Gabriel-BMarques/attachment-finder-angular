@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "short",
+    "examples": [
+      "small trunks"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "medium",
+    "examples": [
+      "small trees"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "large",
+    "examples": [
+      "large trees"
+    ]
+  }
+]
