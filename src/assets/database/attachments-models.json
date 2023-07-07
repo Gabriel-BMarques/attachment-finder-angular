@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "HF150",
+    "price": 7500,
+    "attachment": 1,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [1, 2],
+    "weightCategoriesIds": [1],
+    "materialLenghtsIds": [1]
+  },
+  {
+    "id": 2,
+    "name": "HF300",
+    "price": 12000,
+    "attachment": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [1, 2],
+    "weightCategoriesIds": [1, 2],
+    "materialLenghtsIds": [1, 2]
+  },
+  {
+    "id": 3,
+    "name": "HF400",
+    "attachment": 3,
+    "price": 30000,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [1, 2],
+    "weightCategoriesIds": [1, 2, 3],
+    "materialLenghtsIds": [1, 2, 3]
+  }
+]

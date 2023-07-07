@@ -3,12 +3,14 @@
     "id": 1,
     "name": "standard flow",
     "minGpm": 17,
-    "maxGpm": 25
+    "maxGpm": 25,
+    "unit": "gpm"
   },
   {
-    "id": 1,
+    "id": 2,
     "name": "high flow",
     "minGpm": 30,
-    "maxGpm": 45
+    "maxGpm": 45,
+    "unit": "gpm"
   }
 ]
