@@ -1,10 +1,62 @@
 [
   {
     "id": 1,
-    "name": "excavator"
+    "name": "excavator",
+    "isHydraulic": true,
+    "fuel": false
   },
   {
     "id": 2,
-    "name": "skid steer"
+    "name": "skid steer",
+    "isHydraulic": true,
+    "fuel": false
+  },
+  {
+    "id": 3,
+    "name": "bulldozer",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 4,
+    "name": "backhoe loader",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 5,
+    "name": "crane",
+    "isHydraulic": true,
+    "fuel": false
+  },
+  {
+    "id": 6,
+    "name": "forklift",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 7,
+    "name": "compactor",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 8,
+    "name": "grader",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 9,
+    "name": "skidder",
+    "isHydraulic": true,
+    "fuel": true
+  },
+  {
+    "id": 10,
+    "name": "scraper",
+    "isHydraulic": true,
+    "fuel": true
   }
 ]

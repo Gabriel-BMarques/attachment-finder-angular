@@ -1,0 +1,23 @@
+<div class="modal">
+  <div class="modal-content">
+    <h2>Modal com Stepper</h2>
+    <div class="stepper">
+      <div *ngFor="let step of steps; let index = index">
+        <div class="step" *ngIf="index + 1 === currentStep">
+          <app-modal-step
+            [stepTitle]="step.stepTitle(getModalTitleData(index))"
+            [stepQuestion]="step.stepQuestion('undefined machinery')"
+            [dataUrl]="step.dataUrl"
+            [stepId]="step.id"
+          >
+          </app-modal-step>
+        </div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="previous-button" (click)="previousStep()" *ngIf="currentStep > 1">Previous</button>
+      <button class="next-button" (click)="nextStep()" *ngIf="currentStep < steps.length">Next</button>
+    </div>
+  </div>
+</div>
+

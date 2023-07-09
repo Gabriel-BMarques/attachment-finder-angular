@@ -3,30 +3,500 @@
     "id": 1,
     "name": "HF150",
     "price": 7500,
-    "attachment": 1,
+    "attachmentTypeId": 1,
     "hydraulicFlowsIds": [1],
     "machineTypesIds": [1, 2],
     "weightCategoriesIds": [1],
-    "materialLenghtsIds": [1]
+    "materialLengthsIds": [1]
   },
   {
     "id": 2,
     "name": "HF300",
     "price": 12000,
-    "attachment": 2,
+    "attachmentTypeId": 1,
     "hydraulicFlowsIds": [1, 2],
     "machineTypesIds": [1, 2],
     "weightCategoriesIds": [1, 2],
-    "materialLenghtsIds": [1, 2]
+    "materialLengthsIds": [1, 2]
   },
   {
     "id": 3,
     "name": "HF400",
-    "attachment": 3,
+    "attachmentTypeId": 1,
     "price": 30000,
     "hydraulicFlowsIds": [2],
     "machineTypesIds": [1, 2],
     "weightCategoriesIds": [1, 2, 3],
-    "materialLenghtsIds": [1, 2, 3]
+    "materialLengthsIds": [1, 2, 3]
+  },
+  {
+    "id": 4,
+    "name": "Concrete Pump CP120",
+    "price": 15000,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [4],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 5,
+    "name": "Log Grapple LG250",
+    "price": 8500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 6,
+    "name": "Auger Drive AD350",
+    "price": 4500,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [3, 5],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 7,
+    "name": "Snow Blower SB200",
+    "price": 6500,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 8,
+    "name": "Trench Compactor TC300",
+    "price": 10000,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [8],
+    "weightCategoriesIds": [3],
+    "materialLengthsIds": [3]
+  },
+  {
+    "id": 9,
+    "name": "Flail Mower FM150",
+    "price": 6500,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [8, 9],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 10,
+    "name": "Ripper Tooth RT200",
+    "price": 2000,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [10],
+    "weightCategoriesIds": [3],
+    "materialLengthsIds": [3]
+  },
+  {
+    "id": 11,
+    "name": "Concrete Breaker CB500",
+    "price": 18000,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [4, 6],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 12,
+    "name": "Brush Cutter BC180",
+    "price": 4000,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 13,
+    "name": "Pallet Forks PF350",
+    "price": 2800,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [1, 3],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 14,
+    "name": "Grapple Bucket GB450",
+    "price": 5000,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5, 6],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 15,
+    "name": "Snow Pusher SP300",
+    "price": 3200,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [7, 8],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 16,
+    "name": "Tiller T150",
+    "price": 4200,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [3, 5],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 17,
+    "name": "Stump Grinder SG200",
+    "price": 6200,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 18,
+    "name": "Rock Saw RS400",
+    "price": 14500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [4, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 19,
+    "name": "HF500",
+    "price": 25000,
+    "attachmentTypeId": 1,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [2, 3],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2, 3]
+  },
+  {
+    "id": 20,
+    "name": "Concrete Mixer CM250",
+    "price": 5500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [4, 6],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 21,
+    "name": "Broom Attachment BA300",
+    "price": 3800,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 22,
+    "name": "Snow Plow SP400",
+    "price": 5200,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [7, 8],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 23,
+    "name": "Grapple Bucket GB550",
+    "price": 6800,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [5, 6, 9],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 24,
+    "name": "Compactor C300",
+    "price": 9500,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [8],
+    "weightCategoriesIds": [3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 25,
+    "name": "Grader Blade GB700",
+    "price": 7800,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [8, 9],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 26,
+    "name": "Skid Steer Forks SF400",
+    "price": 2800,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5, 6],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 27,
+    "name": "Ripper Shank RS300",
+    "price": 2100,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [4, 7, 10],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 28,
+    "name": "Crane Jib CJ200",
+    "price": 3800,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [1, 3, 7],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 29,
+    "name": "Cement Mixer CM350",
+    "price": 6200,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [4, 6],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 30,
+    "name": "Wood Chipper WC180",
+    "price": 4800,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 31,
+    "name": "Rock Bucket RB400",
+    "price": 5500,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 3, 5],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 32,
+    "name": "Trencher Attachment TA250",
+    "price": 6200,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [3, 4],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 33,
+    "name": "Sweeper Attachment SA350",
+    "price": 4000,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 34,
+    "name": "Backhoe Attachment BA500",
+    "price": 16500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [4, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 35,
+    "name": "Tiller T250",
+    "price": 5800,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [3, 5],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1]
+  },
+  {
+    "id": 36,
+    "name": "Stump Grinder SG300",
+    "price": 7200,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 37,
+    "name": "Hydraulic Hammer HH600",
+    "price": 14500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [4, 6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 38,
+    "name": "Fork Grapple FG400",
+    "price": 5200,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5, 6],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 39,
+    "name": "Rock Rake RR300",
+    "price": 3800,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 3, 5],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 40,
+    "name": "Snow Blade SB350",
+    "price": 4800,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 41,
+    "name": "Soil Cultivator SC200",
+    "price": 3200,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 42,
+    "name": "Trench Compactor TC450",
+    "price": 10000,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [8],
+    "weightCategoriesIds": [3],
+    "materialLengthsIds": [3]
+  },
+  {
+    "id": 43,
+    "name": "Forklift Forks FF350",
+    "price": 2800,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [1, 3],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 44,
+    "name": "Angle Broom AB200",
+    "price": 3800,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 45,
+    "name": "Snow Blower SB400",
+    "price": 7200,
+    "attachmentTypeId": 3,
+    "hydraulicFlowsIds": [2],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 46,
+    "name": "Rake Grapple RG250",
+    "price": 5200,
+    "attachmentTypeId": 5,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 47,
+    "name": "Sweeper Attachment SA400",
+    "price": 4500,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [6, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [1, 2]
+  },
+  {
+    "id": 48,
+    "name": "Backhoe Attachment BA600",
+    "price": 21500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1, 2],
+    "machineTypesIds": [4, 7],
+    "weightCategoriesIds": [2, 3],
+    "materialLengthsIds": [2, 3]
+  },
+  {
+    "id": 49,
+    "name": "Stump Grinder SG400",
+    "price": 8500,
+    "attachmentTypeId": 4,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [2, 5],
+    "weightCategoriesIds": [2],
+    "materialLengthsIds": [2]
+  },
+  {
+    "id": 50,
+    "name": "Concrete Mixer CM350",
+    "price": 5500,
+    "attachmentTypeId": 2,
+    "hydraulicFlowsIds": [1],
+    "machineTypesIds": [4, 6],
+    "weightCategoriesIds": [1, 2],
+    "materialLengthsIds": [1, 2]
   }
 ]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "cone splitter",
+    "attachmentId": 1
+  },
+  {
+    "id": 2,
+    "name": "log grapple",
+    "attachmentId": 6
+  },
+  {
+    "id": 3,
+    "name": "concrete pump",
+    "attachmentId": 2
+  },
+  {
+    "id": 4,
+    "name": "sweeper broom",
+    "attachmentId": 4
+  },
+  {
+    "id": 5,
+    "name": "snow blower",
+    "attachmentId": 5
+  },
+  {
+    "id": 6,
+    "name": "auger drive",
+    "attachmentId": 3
+  },
+  {
+    "id": 7,
+    "name": "trench compactor",
+    "attachmentId": 7
+  },
+  {
+    "id": 8,
+    "name": "flail mower",
+    "attachmentId": 8
+  },
+  {
+    "id": 9,
+    "name": "ripper tooth",
+    "attachmentId": 9
+  },
+  {
+    "id": 10,
+    "name": "crane jib",
+    "attachmentId": 10
+  },
+  {
+    "id": 11,
+    "name": "rock saw",
+    "attachmentId": 7
+  },
+  {
+    "id": 12,
+    "name": "stump grinder",
+    "attachmentId": 4
+  },
+  {
+    "id": 13,
+    "name": "snow pusher",
+    "attachmentId": 5
+  },
+  {
+    "id": 14,
+    "name": "pallet forks",
+    "attachmentId": 6
+  },
+  {
+    "id": 15,
+    "name": "compaction plate",
+    "attachmentId": 7
+  },
+  {
+    "id": 16,
+    "name": "tiller",
+    "attachmentId": 3
+  },
+  {
+    "id": 17,
+    "name": "grader blade",
+    "attachmentId": 8
+  },
+  {
+    "id": 18,
+    "name": "soil ripper",
+    "attachmentId": 9
+  },
+  {
+    "id": 19,
+    "name": "man basket",
+    "attachmentId": 10
+  },
+  {
+    "id": 20,
+    "name": "concrete breaker",
+    "attachmentId": 2
+  }
+]

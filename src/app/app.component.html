@@ -1,1 +1,2 @@
-<app-attachment-finder-button></app-attachment-finder-button>
+<app-attachment-finder-button (click)="openModal()"></app-attachment-finder-button>
+<app-attachment-finder-modal *ngIf="modalOpen"></app-attachment-finder-modal>

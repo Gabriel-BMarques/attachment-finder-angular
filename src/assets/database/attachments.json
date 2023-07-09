@@ -1,6 +1,52 @@
 [
   {
     "id": 1,
-    "name": "cone splitter"
+    "name": "wood splitter",
+    "compatibleMachineryIds": [1, 2]
+  },
+  {
+    "id": 2,
+    "name": "concrete mixer",
+    "compatibleMachineryIds": [4, 7]
+  },
+  {
+    "id": 3,
+    "name": "auger",
+    "compatibleMachineryIds": [1, 3, 5]
+  },
+  {
+    "id": 4,
+    "name": "broom attachment",
+    "compatibleMachineryIds": [6, 8, 9]
+  },
+  {
+    "id": 5,
+    "name": "snow plow",
+    "compatibleMachineryIds": [7, 10]
+  },
+  {
+    "id": 6,
+    "name": "grapple bucket",
+    "compatibleMachineryIds": [2, 5, 6]
+  },
+  {
+    "id": 7,
+    "name": "trencher",
+    "compatibleMachineryIds": [3, 4]
+  },
+  {
+    "id": 8,
+    "name": "mower attachment",
+    "compatibleMachineryIds": [2, 8, 9]
+  },
+  {
+    "id": 9,
+    "name": "ripper",
+    "compatibleMachineryIds": [4, 10]
+  },
+  {
+    "id": 10,
+    "name": "crane attachment",
+    "compatibleMachineryIds": [1, 3, 7]
   }
 ]

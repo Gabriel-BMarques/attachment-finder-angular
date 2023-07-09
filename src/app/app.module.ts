@@ -6,11 +6,17 @@ import { AttachmentFinderButtonComponent } from './components/buttons/attachment
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AttachmentFinderModalComponent } from './components/modals/attachment-finder-modal/attachment-finder-modal.component';
+import { ModalStepComponent } from './components/modals/attachment-finder-modal/modal-step/modal-step.component';
+import { StepCardComponent } from './components/modals/attachment-finder-modal/modal-step/step-card/step-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AttachmentFinderButtonComponent
+    AttachmentFinderButtonComponent,
+    AttachmentFinderModalComponent,
+    ModalStepComponent,
+    StepCardComponent
   ],
   imports: [
     BrowserModule,
