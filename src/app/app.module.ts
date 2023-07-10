@@ -9,6 +9,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AttachmentFinderModalComponent } from './components/modals/attachment-finder-modal/attachment-finder-modal.component';
 import { ModalStepComponent } from './components/modals/attachment-finder-modal/modal-step/modal-step.component';
 import { StepCardComponent } from './components/modals/attachment-finder-modal/modal-step/step-card/step-card.component';
+import { ProductCardComponent } from './components/modals/attachment-finder-modal/modal-step/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StepCardComponent } from './components/modals/attachment-finder-modal/m
     AttachmentFinderButtonComponent,
     AttachmentFinderModalComponent,
     ModalStepComponent,
-    StepCardComponent
+    StepCardComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

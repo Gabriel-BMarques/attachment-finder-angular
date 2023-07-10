@@ -39,13 +39,6 @@ export class AttachmentFinderModalComponent {
     private attachmentFinderService: AttachmentFinderService
   ) {}
 
-  getModalTitleData(index: number): any[] {
-    const { id } = this.steps[index];
-
-    if (id === 'result') return [index + 1, this.attachmentFinderService.attachment?.name]
-    return [index + 1];
-  }
-
   previousStep() {
     this.attachmentFinderService.previousStep();
   }
