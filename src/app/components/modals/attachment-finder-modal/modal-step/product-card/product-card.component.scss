@@ -71,6 +71,20 @@
     font-weight: 600;
     margin: 1rem 0;
   }
+
+  .recommended-indicator {
+    position: absolute;
+    width: -webkit-fill-available;
+    text-align: center;
+    top: 0;
+    right: 0;
+    padding: 0.25rem 0.5rem;
+    background-color: #ffba3f;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
 }
 
 .product-card:hover {
