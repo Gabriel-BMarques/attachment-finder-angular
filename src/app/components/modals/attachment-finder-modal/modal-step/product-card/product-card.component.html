@@ -1,0 +1,16 @@
+<div
+  class="product-card"
+  [ngStyle]="isLast ? { margin: 0 } : null"
+>
+  <span class="card-title">
+    {{ product.name }}
+  </span>
+  <span class="card-subtitle">
+    {{ attachmentTypeName }}
+  </span>
+  <span class="product-price">
+    ${{ product.price }}
+  </span>
+  <button class="select-button">buy now</button>
+  <a class="more-details">details</a>
+</div>

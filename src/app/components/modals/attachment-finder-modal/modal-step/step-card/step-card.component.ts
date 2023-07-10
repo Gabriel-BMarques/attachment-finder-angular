@@ -9,4 +9,5 @@ export class StepCardComponent {
   @Input() option!: any;
   @Input() selected?: boolean
   @Input() stepId!: string;
+  @Input() isLast!: boolean;
 }

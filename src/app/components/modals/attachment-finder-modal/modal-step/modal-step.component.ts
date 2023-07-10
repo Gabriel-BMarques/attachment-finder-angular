@@ -1,10 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { AttachmentModel } from 'src/app/_typings/attachment-model';
-import { HydraulicFlow } from 'src/app/_typings/hydraulic-flow';
+import { AttachmentFinderStep } from 'src/app/_typings/attachment-finder-step';
 import { MachineType } from 'src/app/_typings/machine-type';
-import { MaterialLength } from 'src/app/_typings/material-length';
-import { WeightCategory } from 'src/app/_typings/weight-category';
-import { attachmentFinderSteps } from 'src/app/constants/attachment-finder/attachmet-finder-steps';
 import { DataService } from 'src/app/services/api/data.service';
 import { AttachmentFinderService } from 'src/app/services/wizards/attachment-finder.service';
 
@@ -14,20 +10,29 @@ import { AttachmentFinderService } from 'src/app/services/wizards/attachment-fin
   styleUrls: ['./modal-step.component.scss']
 })
 export class ModalStepComponent {
-  @Input() stepTitle!: string;
-  @Input() stepQuestion!: string | null;
-  @Input() stepId!: string;
-  @Input() table!: string;
+  @Input() step!: AttachmentFinderStep;
+  @Input() index!: number;
 
   loading = true;
   options: any[] = [];
   optionsList: any[] = [];
   attachmentId: number = 1;
+  stepTitle!: string;
+  stepQuestion!: string | null;
+
+  get selectedMachine(): MachineType | undefined {
+    return this.attachmentFinderService.wizardData.machineType;
+  }
 
   constructor(
     private dataService: DataService,
     private attachmentFinderService: AttachmentFinderService
   ) {}
+
+  getModalTitleData(index: number): any[] {
+    if (this.step.id === 'result') return [this.optionsList.length || 0, this.attachmentFinderService.attachment?.name]
+    return [index + 1];
+  }
 
   save(step: string, option: any): void {
     this.attachmentFinderService.save(step, option);
@@ -35,7 +40,7 @@ export class ModalStepComponent {
 
   checkSelection(option: any): boolean {
     const { machineType, weightCategory, hydraulicFlow, materialLength } = this.attachmentFinderService.wizardData;
-    switch (this.stepId) {
+    switch (this.step.id) {
       case 'machineType':
         return option.id === machineType?.id
       case 'weigthCategory':
@@ -68,7 +73,7 @@ export class ModalStepComponent {
   }
 
   async getOptionsByStepId(): Promise<any[] | null> {
-    switch (this.stepId) {
+    switch (this.step.id) {
       case 'machineType':
         const compatibleMachinery = this.attachmentFinderService.attachment?.compatibleMachineryIds;
         return this.options.filter((o) => compatibleMachinery?.includes(o.id));
@@ -82,8 +87,10 @@ export class ModalStepComponent {
   async loadData(): Promise<void> {
     try {
       await this.attachmentFinderService.setAttachmentByParam(this.attachmentId);
-      this.options = await this.dataService.find(this.table, {});
+      this.options = await this.dataService.find(this.step.table, {});
       this.optionsList = await this.getOptionsByStepId() || [];
+      this.stepTitle = this.step.stepTitle(this.getModalTitleData(this.index));
+      this.stepQuestion = this.step.stepQuestion(this.selectedMachine?.name);
       this.populateOptionsAdditionalInfo();
     } catch (error: any) {
       console.log('Error while loading data', error)

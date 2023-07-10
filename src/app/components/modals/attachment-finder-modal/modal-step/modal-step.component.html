@@ -1,14 +1,25 @@
 <div class="step-container">
+  <div *ngIf="loading" class="loader-overlay">
+    <div class="loader"></div>
+  </div>
   <div class="step-header">
     <span class="step-title">{{ stepTitle }}</span>
     <span class="step-question">{{ stepQuestion }}</span>
   </div>
   <div class="options-list">
-    <ng-container *ngFor="let option of optionsList">
+    <ng-container *ngFor="let option of optionsList; let first = first; let last = last">
+      <app-product-card
+        *ngIf="step.id === 'result'"
+        [product]="option"
+        [isLast]="last"
+      >
+      </app-product-card>
       <app-step-card
-        (click)="save(stepId, option)"
+        *ngIf="step.id !== 'result'"
+        (click)="save(step.id, option)"
         [option]="option"
         [selected]="checkSelection(option)"
+        [isLast]="last"
       ></app-step-card>
     </ng-container>
   </div>

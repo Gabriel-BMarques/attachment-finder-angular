@@ -25,9 +25,10 @@
 
   .options-list {
       display: inline-flex;
-      width: 100%;
+      max-width: -webkit-fill-available;
       justify-content: auto;
+      justify-content: flex-start;
       overflow-x: auto;
-      padding: 1rem;
+      padding: 1rem 0.5rem;
     }
 }
