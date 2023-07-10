@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MachineType } from 'src/app/_typings/machine-type';
-import { attachmentFinderSteps } from 'src/app/constants/attachment-finder/attachmet-finder-steps';
 import { AttachmentFinderService } from 'src/app/services/wizards/attachment-finder.service';
 
 @Component({

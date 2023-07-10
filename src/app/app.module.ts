@@ -10,6 +10,7 @@ import { AttachmentFinderModalComponent } from './components/modals/attachment-f
 import { ModalStepComponent } from './components/modals/attachment-finder-modal/modal-step/modal-step.component';
 import { StepCardComponent } from './components/modals/attachment-finder-modal/modal-step/step-card/step-card.component';
 import { ProductCardComponent } from './components/modals/attachment-finder-modal/modal-step/product-card/product-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProductCardComponent } from './components/modals/attachment-finder-moda
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
       TranslateModule.forRoot({
           loader: {

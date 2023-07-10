@@ -2,11 +2,11 @@
   <div *ngIf="loading" class="loader-overlay">
     <div class="loader"></div>
   </div>
-  <div class="step-header">
+  <div *ngIf="!loading" class="step-header">
     <span class="step-title">{{ stepTitle }}</span>
     <span class="step-question">{{ stepQuestion }}</span>
   </div>
-  <div class="options-list">
+  <div *ngIf="!loading" class="options-list">
     <ng-container *ngFor="let option of optionsList; let first = first; let last = last">
       <app-product-card
         *ngIf="step.id === 'result'"

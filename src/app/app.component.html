@@ -1,2 +1,9 @@
-<app-attachment-finder-button (click)="openModal()"></app-attachment-finder-button>
+<h3>First select an attachment</h3>
+<div class="select-wrapper">
+  <select [(ngModel)]="selectedOption" (ngModelChange)="onOptionChange($event)">
+    <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
+  </select>
+</div>
+<app-attachment-finder-button [disabled]="!attachmentSelected" (click)="openModal()"></app-attachment-finder-button>
 <app-attachment-finder-modal *ngIf="modalOpen"></app-attachment-finder-modal>
+

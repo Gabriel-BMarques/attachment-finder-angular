@@ -68,8 +68,11 @@ export class ModalStepComponent {
   }
 
   async ngOnInit(): Promise<void> {
+    const loadingTimeout = this.step.id === 'result' ? 2500 : 0
     await this.loadData();
-    this.loading = false;
+    setTimeout(() => {
+      this.loading = false;
+    }, loadingTimeout);
   }
 
   async getOptionsByStepId(): Promise<any[] | null> {
@@ -86,7 +89,6 @@ export class ModalStepComponent {
 
   async loadData(): Promise<void> {
     try {
-      await this.attachmentFinderService.setAttachmentByParam(this.attachmentId);
       this.options = await this.dataService.find(this.step.table, {});
       this.optionsList = await this.getOptionsByStepId() || [];
       this.stepTitle = this.step.stepTitle(this.getModalTitleData(this.index));

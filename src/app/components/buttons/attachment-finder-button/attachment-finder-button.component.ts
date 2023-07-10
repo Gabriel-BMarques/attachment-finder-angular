@@ -5,4 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './attachment-finder-button.component.html',
   styleUrls: ['./attachment-finder-button.component.scss']
 })
-export class AttachmentFinderButtonComponent {}
+export class AttachmentFinderButtonComponent {
+  @Input() disabled!: boolean;
+}

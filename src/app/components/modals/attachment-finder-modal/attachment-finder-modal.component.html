@@ -1,6 +1,7 @@
 <div class="modal">
   <div class="modal-content">
     <div>
+      <button class="close-button">&#10006;</button>
       <div *ngFor="let step of steps; let index = index">
         <div *ngIf="index + 1 === currentStep">
           <app-modal-step
@@ -12,8 +13,10 @@
       </div>
     </div>
     <div class="modal-actions">
-      <button class="previous-button" (click)="previousStep()" *ngIf="currentStep > 1">Previous</button>
-      <button class="next-button" [disabled]="!hasSelection" (click)="nextStep()" *ngIf="currentStep < steps.length">Next</button>
+      <a class="talk-to-expert">not sure? talk to an expert!</a>
+      <button *ngIf="currentStep < steps.length" class="next-button" [disabled]="!hasSelection" (click)="nextStep()">next</button>
+      <button *ngIf="currentStep < steps.length && currentStep > 1" class="previous-button" (click)="previousStep()">previous</button>
+      <button *ngIf="currentStep === steps.length" class="previous-button">compare models</button>
     </div>
   </div>
 </div>
