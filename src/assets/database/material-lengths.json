@@ -2,22 +2,22 @@
   {
     "id": 1,
     "name": "short",
-    "examples": [
-      "small trunks"
-    ]
+    "min": null,
+    "max": 6,
+    "unit": "ft"
   },
   {
     "id": 2,
     "name": "medium",
-    "examples": [
-      "small trees"
-    ]
+    "min": 6,
+    "max": 12,
+    "unit": "ft"
   },
   {
     "id": 3,
     "name": "large",
-    "examples": [
-      "large trees"
-    ]
+    "min": 12,
+    "max": null,
+    "unit": "ft"
   }
 ]

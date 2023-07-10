@@ -2,22 +2,22 @@
   {
     "id": 1,
     "name": "mini - standon",
-    "minWeight": null,
-    "maxWeight": 120,
+    "min": null,
+    "max": 120,
     "unit": "lbs"
   },
   {
     "id": 2,
     "name": "medium",
-    "minWeight": 120,
-    "maxWeight": 240,
+    "min": 120,
+    "max": 240,
     "unit": "lbs"
   },
   {
     "id": 3,
     "name": "large",
-    "minWeight": 240,
-    "maxWeight": 480,
+    "min": 240,
+    "max": 480,
     "unit": "lbs"
   }
 ]

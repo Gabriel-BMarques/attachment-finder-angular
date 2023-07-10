@@ -15,7 +15,7 @@
     </div>
     <div class="modal-actions">
       <button class="previous-button" (click)="previousStep()" *ngIf="currentStep > 1">Previous</button>
-      <button class="next-button" (click)="nextStep()" *ngIf="currentStep < steps.length">Next</button>
+      <button class="next-button" [disabled]="!hasSelection" (click)="nextStep()" *ngIf="currentStep < steps.length">Next</button>
     </div>
   </div>
 </div>

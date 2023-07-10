@@ -19,6 +19,22 @@ export class AttachmentFinderModalComponent {
     return this.attachmentFinderService.wizardData.machineType;
   }
 
+  get hasSelection(): boolean {
+    const { machineType, weightCategory, hydraulicFlow, materialLength } = this.attachmentFinderService.wizardData;
+    switch (this.currentStep) {
+      case 1:
+        return !!machineType;
+      case 2:
+        return !!weightCategory;
+      case 3:
+        return !!hydraulicFlow;
+      case 4:
+        return !!materialLength;
+      default:
+        return true;
+    }
+  }
+
   constructor(
     private attachmentFinderService: AttachmentFinderService
   ) {}

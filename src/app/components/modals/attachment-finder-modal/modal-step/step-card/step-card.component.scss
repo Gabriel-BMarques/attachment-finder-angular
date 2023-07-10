@@ -1,5 +1,6 @@
 .option-card,
 .option-card-selected {
+  cursor: pointer;
   background-color: #fff;
   border: 2px solid transparent;
   border-radius: 0.5rem;
@@ -37,6 +38,17 @@
     text-transform: capitalize;
     font-size: 1.25rem;
     font-weight: 600;
+  }
+
+  .card-additional-info {
+    width: 100%;
+    color: #171718ab;
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-size: 0.7rem;
+    font-weight: 400;
   }
 }
 

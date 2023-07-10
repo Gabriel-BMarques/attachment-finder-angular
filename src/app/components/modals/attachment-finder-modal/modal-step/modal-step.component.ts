@@ -21,7 +21,7 @@ export class ModalStepComponent {
 
   loading = true;
   options: any[] = [];
-  optionsList: any[] | null = [];
+  optionsList: any[] = [];
   attachmentId: number = 1;
 
   constructor(
@@ -47,6 +47,21 @@ export class ModalStepComponent {
     }
   }
 
+  populateOptionsAdditionalInfo() {
+    const getOptionAdditionalInfo = (option: any) => {
+      if (!option.min) return `max of ${option.max} ${option.unit}`
+      if (!option.max) return `up to ${option.min} ${option.unit}`
+      return `between ${option.min} and ${option.max} ${option.unit}`
+    }
+
+    this.optionsList?.map((op) => {
+      const hasUnitData = !!op.unit;
+
+      if (hasUnitData)
+        op.additionalInfo = getOptionAdditionalInfo(op)
+    })
+  }
+
   async ngOnInit(): Promise<void> {
     await this.loadData();
     this.loading = false;
@@ -65,8 +80,13 @@ export class ModalStepComponent {
   }
 
   async loadData(): Promise<void> {
-    await this.attachmentFinderService.setAttachmentByParam(this.attachmentId);
-    this.options = await this.dataService.find(this.table, {});
-    this.optionsList = await this.getOptionsByStepId();
+    try {
+      await this.attachmentFinderService.setAttachmentByParam(this.attachmentId);
+      this.options = await this.dataService.find(this.table, {});
+      this.optionsList = await this.getOptionsByStepId() || [];
+      this.populateOptionsAdditionalInfo();
+    } catch (error: any) {
+      console.log('Error while loading data', error)
+    }
   }
 }

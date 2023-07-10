@@ -2,5 +2,8 @@
   <span class="card-title">
     {{ option.name }}
   </span>
+  <span *ngIf="option.additionalInfo" class="card-additional-info">
+    {{ option.additionalInfo }}
+  </span>
   <button class="select-button">select</button>
 </div>

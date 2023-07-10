@@ -71,3 +71,11 @@
   background-color: #fff;
   color: #ffb93f;
 }
+
+.previous-button:disabled,
+.next-button:disabled {
+  background-color: #ffffff;
+  border: 2px solid #171718;
+  color: #171718;
+  cursor: auto;
+}
