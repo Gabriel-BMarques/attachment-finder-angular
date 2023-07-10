@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MachineType } from 'src/app/_typings/machine-type';
 import { AttachmentFinderService } from 'src/app/services/wizards/attachment-finder.service';
 
@@ -8,6 +8,8 @@ import { AttachmentFinderService } from 'src/app/services/wizards/attachment-fin
   styleUrls: ['./attachment-finder-modal.component.scss']
 })
 export class AttachmentFinderModalComponent {
+  @Output() closeModalEvent = new EventEmitter();
+
   steps = this.attachmentFinderService.steps;
 
   get currentStep(): number {
@@ -37,6 +39,10 @@ export class AttachmentFinderModalComponent {
   constructor(
     private attachmentFinderService: AttachmentFinderService
   ) {}
+
+  closeModal() {
+    this.closeModalEvent.emit();
+  }
 
   previousStep() {
     this.attachmentFinderService.previousStep();

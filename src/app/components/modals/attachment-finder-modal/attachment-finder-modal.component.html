@@ -1,7 +1,7 @@
 <div class="modal">
   <div class="modal-content">
     <div>
-      <button class="close-button">&#10006;</button>
+      <button class="close-button" (click)="closeModal()">&#10006;</button>
       <div *ngFor="let step of steps; let index = index">
         <div *ngIf="index + 1 === currentStep">
           <app-modal-step

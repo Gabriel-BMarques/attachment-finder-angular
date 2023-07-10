@@ -34,7 +34,12 @@ export class AppComponent {
 
   openModal(): void {
     this.modalOpen = true;
-    console.log(this.modalOpen)
+  }
+
+  closeModal(): void {
+    this.modalOpen = false;
+    console.log(this.modalOpen);
+    this.attachmentFinderService.resetWizard();
   }
 
   async loadOptions(): Promise<void> {

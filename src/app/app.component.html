@@ -5,5 +5,5 @@
   </select>
 </div>
 <app-attachment-finder-button [disabled]="!attachmentSelected" (click)="openModal()"></app-attachment-finder-button>
-<app-attachment-finder-modal *ngIf="modalOpen"></app-attachment-finder-modal>
+<app-attachment-finder-modal *ngIf="modalOpen" (closeModalEvent)="closeModal()"></app-attachment-finder-modal>
 

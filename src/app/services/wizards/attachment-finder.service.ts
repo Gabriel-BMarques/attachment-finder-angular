@@ -55,6 +55,11 @@ export class AttachmentFinderService {
     private dataService: DataService
   ) {}
 
+  resetWizard() {
+    this.wizard = {};
+    this.currentStep = 1;
+  }
+
   previousStep() {
     if (this.currentStep > 1) {
       this.currentStep -= 1;
