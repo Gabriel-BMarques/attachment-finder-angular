@@ -29,8 +29,22 @@ export class ModalStepComponent {
     private attachmentFinderService: AttachmentFinderService
   ) {}
 
-  save(step: string, selected: any): void {
-    this.attachmentFinderService.save(step, selected);
+  save(step: string, option: any): void {
+    this.attachmentFinderService.save(step, option);
+  }
+
+  checkSelection(option: any): boolean {
+    const { machineType, weightCategory, hydraulicFlow, materialLength } = this.attachmentFinderService.wizardData;
+    switch (this.stepId) {
+      case 'machineType':
+        return option.id === machineType?.id
+      case 'weigthCategory':
+        return option.id === weightCategory?.id
+      case 'hydraulicFlow':
+        return option.id === hydraulicFlow?.id
+      default:
+        return option.id === materialLength?.id
+    }
   }
 
   async ngOnInit(): Promise<void> {

@@ -1,6 +1,6 @@
-<div class="option-card">
+<div [ngClass]="selected ? 'option-card-selected' : 'option-card'">
   <span class="card-title">
-    {{ itemName }}
+    {{ option.name }}
   </span>
   <button class="select-button">select</button>
 </div>

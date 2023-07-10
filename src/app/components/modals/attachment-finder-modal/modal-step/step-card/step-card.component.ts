@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./step-card.component.scss']
 })
 export class StepCardComponent {
-  @Input() itemId!: number;
-  @Input() itemName!: string;
+  @Input() option!: any;
+  @Input() selected?: boolean
   @Input() stepId!: string;
 }

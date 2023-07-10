@@ -26,6 +26,8 @@
   .options-list {
       display: inline-flex;
       width: 100%;
-      justify-content: center;
+      justify-content: auto;
+      overflow-x: auto;
+      padding: 1rem;
     }
 }
