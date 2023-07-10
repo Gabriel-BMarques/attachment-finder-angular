@@ -1,13 +1,12 @@
 <div class="modal">
   <div class="modal-content">
-    <h2>Modal com Stepper</h2>
     <div class="stepper">
       <div *ngFor="let step of steps; let index = index">
         <div class="step" *ngIf="index + 1 === currentStep">
           <app-modal-step
             [stepTitle]="step.stepTitle(getModalTitleData(index))"
-            [stepQuestion]="step.stepQuestion('undefined machinery')"
-            [dataUrl]="step.dataUrl"
+            [stepQuestion]="step.stepQuestion(this.selectedMachine?.name)"
+            [table]="step.table"
             [stepId]="step.id"
           >
           </app-modal-step>

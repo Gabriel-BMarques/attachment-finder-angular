@@ -1,2 +1,15 @@
-<p>{{ stepTitle }}</p>
-<p>{{ stepQuestion }}</p>
+<div class="step-container">
+  <div class="step-header">
+    <span class="step-title">{{ stepTitle }}</span>
+    <span class="step-question">{{ stepQuestion }}</span>
+  </div>
+  <div class="options-list">
+    <ng-container *ngFor="let option of optionsList">
+      <app-step-card
+        (click)="save(stepId, option)"
+        [itemName]="option.name"
+      ></app-step-card>
+    </ng-container>
+  </div>
+</div>
+

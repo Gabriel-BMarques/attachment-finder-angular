@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MachineType } from 'src/app/_typings/machine-type';
 import { attachmentFinderSteps } from 'src/app/constants/attachment-finder/attachmet-finder-steps';
+import { AttachmentFinderService } from 'src/app/services/wizards/attachment-finder.service';
 
 @Component({
   selector: 'app-attachment-finder-modal',
@@ -7,27 +9,32 @@ import { attachmentFinderSteps } from 'src/app/constants/attachment-finder/attac
   styleUrls: ['./attachment-finder-modal.component.scss']
 })
 export class AttachmentFinderModalComponent {
-  currentStep = 1;
-  steps = attachmentFinderSteps;
+  steps = this.attachmentFinderService.steps;
+
+  get currentStep(): number {
+    return this.attachmentFinderService.currentStep;
+  }
+
+  get selectedMachine(): MachineType | undefined {
+    return this.attachmentFinderService.wizardData.machineType;
+  }
+
+  constructor(
+    private attachmentFinderService: AttachmentFinderService
+  ) {}
 
   getModalTitleData(index: number): any[] {
     const { id } = this.steps[index];
 
-    if (id === 'result') return [index + 1, 'undefined machinery']
+    if (id === 'result') return [index + 1, this.attachmentFinderService.attachment?.name]
     return [index + 1];
   }
 
   previousStep() {
-    console.log(this.currentStep, this.steps.length);
-    if (this.currentStep >= this.steps.length) {
-      this.currentStep -= 1;
-    }
+    this.attachmentFinderService.previousStep();
   }
 
   nextStep() {
-    console.log(this.currentStep, this.steps.length);
-    if (this.currentStep < this.steps.length) {
-      this.currentStep += 1;
-    }
+    this.attachmentFinderService.nextStep();
   }
 }

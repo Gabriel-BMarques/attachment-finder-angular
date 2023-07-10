@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +8,30 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  find(url: string, query: any): Observable<any> {
-    return this.http.get(url).pipe(
-      map((response: any) => response.filter((item: any) => {
-        for (const key in query) {
-          if (item[key] !== query[key]) {
-            return false;
+  async find(url: string, query: any): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      this.http.get(`../../../assets/database/${url}.json`).subscribe((response: any) => {
+        const filteredItems = response.filter((item: any) => {
+          for (const key in query) {
+            if (item[key] !== query[key]) {
+              return false;
+            }
           }
-        }
-        return true;
-      }))
-    );
+          return true;
+        });
+
+        resolve(filteredItems);
+      })
+    });
   }
+
+  async findById(url: string, id: number): Promise<any> {
+    return new Promise<any>((resolve, reject) => {
+      this.http.get(`../../../assets/database/${url}.json`).subscribe((response: any) => {
+        const item = response.find((item: any) => item.id === id);
+        resolve(item);
+      });
+    });
+  }
+
 }

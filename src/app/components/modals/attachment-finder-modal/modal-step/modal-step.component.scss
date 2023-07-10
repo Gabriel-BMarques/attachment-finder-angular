@@ -1,0 +1,31 @@
+.step-container {
+  width: 100%;
+
+  .step-header {
+    text-align: left;
+    margin-bottom: 1.5rem;
+
+    span {
+      display: block;
+    }
+
+    .step-title {
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-question {
+      width: 100%;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+
+  .options-list {
+      display: inline-flex;
+      width: 100%;
+      justify-content: center;
+    }
+}
