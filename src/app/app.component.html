@@ -1,9 +1,13 @@
-<h3>First select an attachment</h3>
-<div class="select-wrapper">
-  <select [(ngModel)]="selectedOption" (ngModelChange)="onOptionChange($event)">
-    <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
-  </select>
+<div class="centralize">
+  <div>
+    <h4>First select an attachment</h4>
+    <div class="select-wrapper">
+      <select [(ngModel)]="selectedOption" (ngModelChange)="onOptionChange($event)">
+        <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
+      </select>
+    </div>
+    <app-attachment-finder-button [disabled]="!attachmentSelected" (click)="openModal()"></app-attachment-finder-button>
+    <app-attachment-finder-modal *ngIf="modalOpen" (closeModalEvent)="closeModal()"></app-attachment-finder-modal>
+  </div>
 </div>
-<app-attachment-finder-button [disabled]="!attachmentSelected" (click)="openModal()"></app-attachment-finder-button>
-<app-attachment-finder-modal *ngIf="modalOpen" (closeModalEvent)="closeModal()"></app-attachment-finder-modal>
 

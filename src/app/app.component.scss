@@ -2,10 +2,20 @@
 $primary-color: #3f51b5;
 $accent-color: #ff4081;
 
-// Estilos do select
+.centralize {
+  display: flex;
+  height: -webkit-fill-available;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    text-align: center;
+  }
+}
+
 .select-wrapper {
   position: relative;
-  width: 200px; // Defina a largura desejada
+  width: 14rem;
   margin: 1rem 0;
 }
 
