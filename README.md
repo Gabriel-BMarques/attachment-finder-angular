@@ -1,6 +1,6 @@
 # MachineryPartnerAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+This project was created as a test for a selection process at Machinery Partner Company and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
 
 ## Development server
 
